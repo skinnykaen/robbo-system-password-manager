@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "robbo-system-password-manager",
+	"description": "Password manager for the robbo ecosystem: edx, crm, ...",
+	"version": "0.0.1",
+    "author": "skinnykaen",
+	"icons": {"128": "icon_128.png"},
+	"browser_action": {
+		"default_icon": "icon_128.png",
+		"default_popup": "popup.html",
+        "default_title": "RSPM"
+	},
+	"permissions": ["storage"]
+	
+}

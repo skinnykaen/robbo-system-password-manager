@@ -1,0 +1,50 @@
+body {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    min-height: 180px;
+    width: 380px;
+}
+
+h1 {
+    font-family: 'Menlo', monospace;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    color: #3bdb63;
+}
+
+img {
+    width: 30px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.modal-content {
+    margin: 5%;
+    min-height: 50px;
+    background-color: rgb(248, 245, 245);
+    border: 2px solid  rgb(110, 108, 108);
+    border-radius: 10px;
+}
+
+/* button {
+  border: 0 !important;
+  border-radius: 100%;
+} */
+
+.modal-button-add {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.modal-button-add .btn {
+    cursor: pointer;
+}
