@@ -50,19 +50,21 @@ img {
     margin-right: 26px;
 }
 
-.title-list{
+.title-current-data{
     padding-top: 20px;
     display: flex;
     justify-content: center;
 }
 
-.title-list, h3 {
+.title-current-data, h3 {
+    display: flex;
+    justify-content: center;
     font-family: 'Menlo', monospace;
     margin: 0;
     color: #3bdb63;
 }
 
-.modal-list {
+.modal-current-data {
     margin: 5%;
     min-height: 50px;
     background-color: rgb(248, 245, 245);
@@ -70,18 +72,28 @@ img {
     border-radius: 10px;
 }
 
-/* button {
-  border: 0 !important;
-  border-radius: 100%;
-} */
+.modal-current-data span {
+    padding-left: 10px;
+    margin-right: 20px;
+}
 
-.modal-button-add {
+.modal-current-data .current-email {
+    display: flex;
+    align-items: center;
+}
+
+.modal-current-data .current-password {
+    display: flex;
+    align-items: center;
+}
+
+.modal-button-edit {
    display: flex;
    align-items: center;
    justify-content: center;
    margin-top: 15px;
 }
 
-.modal-button-add .btn {
+.modal-button-edit .btn {
     cursor: pointer;
 }

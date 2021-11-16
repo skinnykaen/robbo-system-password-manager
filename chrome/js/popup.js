@@ -1,28 +1,37 @@
 window.addEventListener("load", function(){
 
-    let listAccounts  = [];
-    console.log(localStorage.key(0));
+    chrome.storage.sync.get("email",function(obj){
+        document.querySelector("#currentEmail").innerText = obj.email; 
+    });
 
-    for (let i = 0; i < localStorage.length; i++){
-        let key = localStorage.key(i);
-        listAccounts.push(localStorage.getItem(key));
-    }
+    chrome.storage.sync.get("password",function(obj){
+        document.querySelector("#currentPassword").innerText = obj.password; 
+    });
 
-    document.querySelector("#addButton").addEventListener("click", function (){ 
+    document.querySelector("#editButton").addEventListener("click", function (){ 
         let email = document.querySelector("#email").value;
         let password =  document.querySelector("#password").value;
 
-        let dataObj = {};
-        dataObj[email] = email;
-        // dataObj[password] = password;
-        localStorage.setItem(email, password);
-        console.log(listAccounts);
+        let agreement = confirm("Apply changes?");
 
+        if(agreement){
+            chrome.storage.sync.set({"email": email},function(){
+                console.log("email has been changed")
+            });
+             
+            chrome.storage.sync.set({"password": password},function(){
+                console.log("password has been changed")
+            });
+
+            chrome.storage.sync.get("email",function(obj){
+                document.querySelector("#currentEmail").innerText = obj.email; 
+            });
+        
+            chrome.storage.sync.get("password",function(obj){
+                document.querySelector("#currentPassword").innerText = obj.password; 
+            });
+        }
     });
 
-    document.querySelector("#delete").addEventListener("click", function (){ 
-        localStorage.removeItem('email');
-        localStorage.removeItem('password');
-    });
-
+   
 })

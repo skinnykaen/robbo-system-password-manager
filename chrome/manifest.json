@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "robbo-system-password-manager",
 	"description": "Password manager for the robbo ecosystem: edx, crm, ...",
-	"version": "0.0.2",
+	"version": "0.6",
     "author": "skinnykaen",
 	"icons": {"128": "icon_128.png"},
 	"browser_action": {
@@ -10,11 +10,14 @@
 		"default_popup": "popup.html",
         "default_title": "RSPM"
 	},
-	"permissions": ["storage"],
+	"permissions": [
+			"storage",
+			"tabs"
+		],
 	"content_scripts": [
 		{
-		  "matches": [ "https://demo.alfacrm.pro/*" ],
-		  "js": [ "./js/content.js" ]
+		  "matches": ["https://demo.alfacrm.pro/*", "https://www.maqiatto.com/login/*"],
+		  "js": ["./js/content.js"]
 		}
 	]
 	
