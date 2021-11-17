@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,6 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./style/main.css'>
     <script src='./js/popup.js'></script>
 </head>
+
 <body>
     <div class="modal">
         <div class="modal-header">
@@ -23,32 +25,56 @@
                         <span>Email</span>
                         <input type="email" id="email" placeholder="E-mail" required="true">
                     </div>
-    
+
                     <div class="password">
                         <span>Password</span>
                         <input type="text" id="password" placeholder="Password" required="true">
-                    </div>  
+                    </div>
+                    <div class="selectServices">
+                        <span>Select service</span>
+                        <select id="services">
+                            <option value="alfacrm">AlfaCrm</option>
+                            <option value="maqiatto">Maqiatto</option>
+                            <option value="mail.ru">Mail.ru</option>
+                        </select>
+                    </div>
+                    <div class="apply">
+                        <span>Apply to all</span>
+                        <input type="checkbox" id="applyToAll">
+                    </div>
                     <div class="modal-button-edit">
                         <button class="btn" id="editButton" title="Edit data">
                             Edit current data
                         </button>
                     </div>
-                </form>              
+                </form>
             </div>
         </div>
         <div class="title-current-data">
             <h3>Current data</h3>
         </div>
+        <div class="selectCurrentService">
+            <select id="currentServiceSelect">
+                <option value="alfacrm">AlfaCrm</option>
+                <option value="maqiatto">Maqiatto</option>
+                <option value="mail.ru">Mail.ru</option>
+            </select>
+        </div>
         <div class="modal-current-data">
-           <div class="current-email">
-               <span>Current email</span>
-               <p id="currentEmail"></p>
-           </div>
-           <div class="current-password">
+            <div class="current-service">
+                <span>Service</span>
+                <p id="currentService"></p>
+            </div>
+            <div class="current-email">
+                <span>Current email</span>
+                <p id="currentEmail"></p>
+            </div>
+            <div class="current-password">
                 <span>Current password</span>
                 <p id="currentPassword"></p>
-           </div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>

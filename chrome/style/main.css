@@ -38,7 +38,7 @@ img {
     margin: 5%;
 }
 
-.modal-content .form .email {
+.modal-content .form .email,.password,.selectServices{
     margin-bottom: 10px;
 }
 
@@ -48,6 +48,14 @@ img {
 
 .modal-content .form .password span {
     margin-right: 26px;
+}
+
+.modal-content .form .selectServices span {
+    margin-right: 1px;
+}
+
+.modal-content .form .apply span {
+    margin-right: 15px;
 }
 
 .title-current-data{
@@ -72,9 +80,22 @@ img {
     border-radius: 10px;
 }
 
+.selectCurrentService {
+    padding-left: 20px;
+}
+
 .modal-current-data span {
     padding-left: 10px;
     margin-right: 20px;
+}
+
+.modal-current-data .current-service {
+   padding-top: 10px;
+}
+
+.modal-current-data .current-service {
+    display: flex;
+    align-items: center;
 }
 
 .modal-current-data .current-email {
