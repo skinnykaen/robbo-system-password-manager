@@ -1,5 +1,6 @@
 window.addEventListener("load", function(){
 
+    // Инициализация Current Data
     chrome.storage.sync.get("email",function(obj){
         document.querySelector("#currentEmail").innerText = obj.email; 
     });
@@ -8,6 +9,7 @@ window.addEventListener("load", function(){
         document.querySelector("#currentPassword").innerText = obj.password; 
     });
 
+    // Обработчик кнопки Edit. Измененяем chrome.storage
     document.querySelector("#editButton").addEventListener("click", function (){ 
         let email = document.querySelector("#email").value;
         let password =  document.querySelector("#password").value;

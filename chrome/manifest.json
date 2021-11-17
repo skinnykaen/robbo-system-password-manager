@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "robbo-system-password-manager",
-	"description": "Password manager for the robbo ecosystem: edx, crm, ...",
+	"description": "Password manager for the robbo ecosystem: openedx, alfacrm, ...",
 	"version": "0.6",
     "author": "skinnykaen",
 	"icons": {"128": "icon_128.png"},
