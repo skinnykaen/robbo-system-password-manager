@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "robbo-system-password-manager",
 	"description": "Password manager for the robbo ecosystem: openedx, alfacrm, ...",
-	"version": "0.6",
+	"version": "1.0",
     "author": "skinnykaen",
 	"icons": {"128": "icon_128.png"},
 	"browser_action": {
@@ -17,7 +17,7 @@
 	"content_scripts": [
 		{
 		  "matches": ["https://demo.alfacrm.pro/*", "https://www.maqiatto.com/login/*"],
-		  "js": ["./js/content.js"]
+		  "js": ["./js/alfacrm.js", "./js/maqiatto.js"]
 		}
 	],
 	"background": {
